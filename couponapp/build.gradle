@@ -1,0 +1,17 @@
+subprojects({
+  apply plugin:  'application'
+  version='1.1.0'
+  group='com.summer.couponapp'
+  repositories {
+    mavenCentral()
+  }
+  dependencies {
+    testImplementation 'junit:junit:4.13'
+  }
+})
+
+project(':web'){
+  dependencies{
+    implementation project(':services')
+  }
+}
